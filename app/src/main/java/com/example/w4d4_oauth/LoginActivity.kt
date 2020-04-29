@@ -25,6 +25,9 @@ class LoginActivity : AppCompatActivity() {
         const val EXTRA_CLEAR_CREDENTIALS = "com.auth0.CLEAR_CREDENTIALS"
         const val EXTRA_ACCESS_TOKEN = "com.auth0.ACCESS_TOKEN"
         const val EXTRA_ID_TOKEN = "com.auth0.ID_TOKEN"
+
+        const val CODE_DEVICE_AUTHENTICATION = 22
+        const val API_IDENTIFIER = "YOUR API IDENTIFIER"
     }
 
     private lateinit var auth0: Auth0
@@ -58,7 +61,8 @@ class LoginActivity : AppCompatActivity() {
         WebAuthProvider.login(auth0)
             .withScheme("demo")
             .withScope("openid offline_access")
-            .withAudience(String.format("https://%s/userinfo", getString(R.string.com_auth0_domain)))
+//            .withAudience(String.format("https://%s/userinfo", getString(R.string.com_auth0_domain)))
+            .withAudience(API_IDENTIFIER)
             .start(this, loginCallback)
     }
 
