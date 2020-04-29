@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
             logout()
         }
         //Obtain the token from the Intent's extras
-        val accessToken = intent.getStringExtra(LoginActivity.EXTRA_ACCESS_TOKEN);
+        val accessToken = intent.getStringExtra(LoginActivity.EXTRA_ACCESS_TOKEN)
         credentials.text = accessToken
     }
 
