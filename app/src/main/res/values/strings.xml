@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Login</string>
+
+    <string name="com_auth0_client_id">EUynqzu61ddzxRY6a7Y4uQKbXbLiGPtY</string>
+    <string name="com_auth0_domain">dev-ukjh-0o3.auth0.com</string>
+    <string name="login">Log in</string>
+    <string name="logout">Log out</string>
+</resources>
