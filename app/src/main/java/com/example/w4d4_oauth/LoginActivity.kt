@@ -57,6 +57,7 @@ class LoginActivity : AppCompatActivity() {
     fun login() {
         WebAuthProvider.login(auth0)
             .withScheme("demo")
+            .withScope("openid offline_access")
             .withAudience(String.format("https://%s/userinfo", getString(R.string.com_auth0_domain)))
             .start(this, loginCallback)
     }
